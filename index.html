@@ -3,45 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Display</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="user-content" >
-        <div class="user" id="user">
-            <!-- Users will be injected here -->
-        </div>
+    <div id="login-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
     </div>
 
-    <div class="slideshow-box">
-        <div class="box-large">
-            <div class="box-left">
-                <i class="fa-solid fa-angles-left"></i>
-            </div>
-            <div class="box-right">
-                <i class="fa-solid fa-angles-right"></i>
-            </div>
-            <div class="box1" id="box1">
-                <img src="https://scontent.fpnh4-1.fna.fbcdn.net/v/t1.6435-9/186566698_3923654807750676_7489169951658371042_n.png?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEiLfnNeUo4_QJOc9RZi5LXRGZ8DKORIhREZnwMo5EiFB_z88TGkkqE_lyvTggXfZYyJmhGsf7mBnV_huw-jwE8&_nc_ohc=WXita1bLpgQAX-4g2Yy&_nc_ht=scontent.fpnh4-1.fna&oh=00_AfDcQtjhbQtNNNnKcfnGGM7-ioZLTrcYOQyBVKATqrKfbQ&oe=66220AE3" alt="">
-            </div>
-            <div class="box2" id="box2">
-                <img src="https://scontent.fpnh4-1.fna.fbcdn.net/v/t1.6435-9/182418304_3877962445653246_535810790552762913_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHFLA_T9RzsXYEpyKkSvaTUuM5BL3Usm8q4zkEvdSybyrDKKuiMAvf-1mIkBaQof_jEOovdmje3haxYFhmU9Fmd&_nc_ohc=aUv5fe9IT-YAX-g0-cb&_nc_ht=scontent.fpnh4-1.fna&oh=00_AfDgeXbGiy3AoI1PcJbls6HQQxZCtB6OQUIbqR-SIfJmrg&oe=662208B8" alt="">
-            </div>
-            <div class="box3" id="box3">
-                <img src="https://scontent.fpnh4-1.fna.fbcdn.net/v/t1.6435-9/131342532_3500564236726404_890943864675419401_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeF7RqFf-p47MeKvBezVtdjtaL1KTanECzZovUpNqcQLNrjx8fzyQwwU6csQ_RC7mVJfCnYj6LJMy74odd9mBR8G&_nc_ohc=l00_prFqfTkAX-QtM2r&_nc_ht=scontent.fpnh4-1.fna&oh=00_AfASJvrCeSxRc30Vnd5QTyMxz3sDo_wwl_8Yl47LbDzNFQ&oe=6621EF2F" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="product-container">
-        <div class="product" id="product">
-            <!-- Products will be injected here -->
-        </div>
-    </div>
-
-    <!-- Modal -->
-    <div id="product-modal" class="modal"></div>
-
-    <script src="script.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
