@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.product-container {
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
+    padding: 20px;
+}
+.product{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+
+}
+.product-item {
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 400px;
+    /* Calculate width - considering the gap and padding */
+    width: calc((100% - 40px) / 3); /* Adjust the subtraction value based on your gap and padding */
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px; /* Add some space between the image and the title */
+}
+
+.product-title {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    -webkit-box-orient: vertical;
+}
+
+.product-price {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 10px; /* Add some space above the price */
+}
+
+@media (max-width: 1200px) {
+    .product-item {
+        width: calc((100% - 40px) / 2);
+    }
+    .slideshow-box .box-large{
+        width: 80%;
+        height: 300px;
+    }
+}
+/* in ipad screen show 2 card */
+
+@media (max-width: 768px) {
+    .product-item {
+        width: calc((100% - 40px) / 2);
+    }
+    .slideshow-box .box-large{
+        width: 90%;
+        height: 300px;
+    }
+}
+
+/* in mobile screen show 1 card */
+@media (max-width: 576px) {
+    .product-item {
+        width: 100%;
+    }
+    .slideshow-box .box-large{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-detail-image {
+    width: 100%; /* Responsive image size */
+    max-width: 300px; /* Maximum width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* user style  */
+
+.user-content{
+    width: 100%;
+    float: right;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.user-content .user{
+    width:80px;
+    height: 100%;
+    float: right;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    color: white;
+    background-color: red;
+}
+
+
+.slideshow-box{
+    padding-top: 10rem;
+}
+.box-large{
+
+    width: 60%;
+    height: 450px;
+    margin: auto;
+    background-color: aqua;
+    position: relative;
+}
+.box-left, .box-right {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+}
+.box-left { left: 0; }
+.box-right { right: 0; }
+.box1, .box2, .box3 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; /* Initially hide all boxes */
+}
+.box1 { background-color: rgb(26, 91, 51); display: block; /* Show first box initially */ }
+.box2 { background-color: rgb(38, 21, 51); }
+.box3 { background-color: rgb(108, 72, 25);}
+
+.box-large img{
+    width: 100%;
+    height: 100%;
+}
